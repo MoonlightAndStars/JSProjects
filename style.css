@@ -35,7 +35,7 @@ main{
     padding : 1em;
     
     cursor: pointer;
-    transition: all 0.7s ease;
+    transition: all 0.7ms ease;
 }
 
 .key:hover{
@@ -56,4 +56,5 @@ kbd {
 .playing {
 box-shadow: 0 0 0.3em 0.3em yellow;
 transform: scale(1.2);
+
 }
