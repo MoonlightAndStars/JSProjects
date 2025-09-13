@@ -22,14 +22,14 @@
   
 
   function removeTransition(e) {
-    console.log(e);
+    // console.log(e);
     if (e.propertyName != "transform") return;
-    console.log(e.propertyName);
+    // console.log(e.propertyName);
     e.target.classList.remove("playing");
   }
 
   const keys = document.querySelectorAll(".key");
-  console.log(keys);
+  // console.log(keys);
   
   keys.forEach((key) => {
     key.addEventListener("click", () => {
@@ -41,3 +41,4 @@
   });
 
 })();
+
