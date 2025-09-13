@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Drum Kit</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="keys">
+        <div class="key" data-key="KeyA">
+          <kbd>A</kbd>
+          <span class="sound">clap</span>
+        </div>
+        <div class="key" data-key="KeyS">
+          <kbd>S</kbd>
+          <span class="sound">hihat</span>
+        </div>
+        <div class="key" data-key="KeyD">
+          <kbd>D</kbd>
+          <span class="sound">kick</span>
+        </div>
+        <div class="key" data-key="KeyF">
+          <kbd>F</kbd>
+          <span class="sound">openhat</span>
+        </div>
+        <div class="key" data-key="KeyG">
+          <kbd>G</kbd>
+          <span class="sound">boom</span>
+        </div>
+        <div class="key" data-key="KeyH">
+          <kbd>H</kbd>
+          <span class="sound">ride</span>
+        </div>
+        <div class="key" data-key="KeyJ">
+          <kbd>J</kbd>
+          <span class="sound">snare</span>
+        </div>
+        <div class="key" data-key="KeyK">
+          <kbd>K</kbd>
+          <span class="sound">tom</span>
+        </div>
+        <div class="key" data-key="KeyL">
+          <kbd>L</kbd>
+          <span class="sound">tink</span>
+        </div>
+      </div>
+
+
+      <audio data-key="KeyA" src="./audio/clap.mp3"></audio>
+      <audio data-key="KeyS" src="./audio/hihat.mp3"></audio>
+      <audio data-key="KeyD" src="./audio/kick.mp3"></audio>
+      <audio data-key="KeyF" src="./audio/openhat.wav"></audio>
+      <audio data-key="KeyG" src="./audio/boom.mp3"></audio>
+      <audio data-key="KeyH" src="./audio/ride.wav"></audio>
+      <audio data-key="KeyJ" src="./audio/snare.mp3"></audio>
+      <audio data-key="KeyK" src="./audio/tom2.wav"></audio>
+      <audio data-key="KeyL" src="./audio/tink.mp3"></audio>
+    </main>
+  </body>
+</html>
