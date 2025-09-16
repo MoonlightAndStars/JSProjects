@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Counter App</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="main-container">
+    <header>
+      <h1 class="heading">Counter</h1>
+      <div class="links">
+        <a href="#" aria-label="Help / Info">
+          <img src="./assets/question.png" alt="Help icon"/>
+        </a>
+      </div>
+    </header>
+
+    <section class="main-section">
+      <h2 class="count-value">0</h2>
+
+      <div class="buttons">
+        <button class="button button--increment" aria-label="Increment value" title="Value will be incremented by the provided steps">+</button>
+        <button class="button button--decrement" aria-label="Decrement value" title="Value will be decremented by the provided steps">-</button>
+      </div>
+
+      <div class="steps">
+        <label for="input-steps" title="Set steps here to increase or decrease value">
+          Increment/Decrement by:
+          <input type="number" id="input-steps" class="steps__input steps__input--neutral" value="0"/>
+        </label>
+      </div>
+
+      <button type="reset" class="button button--reset" title="Value will be set to 0">Reset</button>
+    </section>
+
+    <footer>
+      <p class="footer__info" aria-hidden="true">
+        Keyboard shortcuts: <kbd>+</kbd> to increment, <kbd>-</kbd> to decrement, <kbd>Page Up</kbd>/<kbd>Page Down</kbd> to change step value.
+      </p>
+    </footer>
+  </main>
+</body>
+</html>

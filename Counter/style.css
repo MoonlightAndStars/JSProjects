@@ -1,0 +1,175 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+
+.main-container {
+    background-color: skyblue; /* this is a fallback value to compensate color-mix on some browsers */
+  background-color: color-mix(in oklab, skyblue 40%, rgb(248, 246, 242) 60%);
+  min-height: 100vh;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: slateblue;
+  color: white;
+  padding: 1em;
+}
+
+.heading {
+  font-size: 2rem;
+  animation: slideDown 2s ease;
+}
+
+.links img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  animation: slideDown 2s ease-out;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  margin: 2em auto;
+  gap: 1em;
+}
+
+.count-value {
+  font-size: 5rem;
+  color: black;
+  text-align: center;
+  animation: slideValue 3s ease;
+}
+
+
+.buttons {
+  display: flex;
+  gap: 0.5em;
+}
+
+.button {
+  padding: 0.2em 0.8em;
+  font-weight: 700;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 0.3em;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.button--increment {
+  color: rgba(118, 238, 118, 0.87);
+  animation: moveFromLeft 2s ease-in-out;
+}
+
+.button--decrement {
+  color: rgba(248, 115, 115, 0.856);
+  animation: moveFromRight 2s ease-in-out;
+}
+
+.button--reset {
+  display: block;
+  margin: 1em auto;
+  padding: 0.2em 0.7em;
+  font-size: 1.2rem;
+  border-radius: 0.5em;
+}
+
+
+.button--active {
+  border: 2px solid currentColor;
+  box-shadow: 0 0 0.1em 0.1em;
+}
+
+
+.steps {
+  text-align: center;
+  margin-top: 1.5em;
+}
+
+label {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: rgba(27, 26, 26, 0.75);
+}
+
+.steps__input {
+  width: 5em;
+  padding: 0.5em;
+  border: 2px solid transparent;
+  border-radius: 1em;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.steps__input:focus {
+  border-color: purple;
+}
+
+
+.steps__input--increasing { color: green; }
+.steps__input--decreasing { color: red; }
+.steps__input--neutral { color: black; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1em 2em;
+  background-color: slateblue;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.footer__info {
+  display: inline-block;
+  transform: translateX(100%);
+  animation: run 20s linear infinite;
+}
+
+kbd {
+  font-family: sans-serif;
+  font-weight: 600;
+  color: black;
+}
+
+@keyframes run {
+  0% { transform: translateX(100%); opacity: 1; }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes slideDown {
+  0% { transform: translateY(-10rem); opacity: 0.3; }
+  100% { transform: translateY(0rem); opacity: 1; }
+}
+
+@keyframes slideValue {
+  0% { transform: translateY(-10rem); opacity: 0; }
+  100% { transform: translateY(0rem); opacity: 1; }
+}
+
+@keyframes moveFromLeft {
+  0% { transform: translateX(-10rem); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes moveFromRight {
+  0% { transform: translateX(10rem); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
