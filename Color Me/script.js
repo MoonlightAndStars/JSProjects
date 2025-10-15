@@ -73,12 +73,12 @@ inputByCellNumbers.addEventListener("input", (e) => {
   });
 });
 
-//!! selecting rows..
+//!! selecting rows..and columns 
 
 function selectByRowAndCol() {
   const row = Number(rowInput.value);
   const col = Number(columnInput.value);
-  const size = Math.sqrt(gSize);
+  const size = Math.sqrt(gSize); //because gSize is the total size of grid (r * c)
 
   if (!row || !col || isNaN(row) || isNaN(col)) return; // ignore empty/invalid
   if (row < 1 || row > size || col < 1 || col > size) {
