@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Me</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+<header>
+      <h1 class="heading">Grid Selection</h1>
+      <div class="links">
+        <a href="https://github.com/MoonlightAndStars/JSProjects/tree/main/Counter" target="_blank" rel="noopener" aria-label="Help / Info">
+          <img src="./assets/question.png" alt="Help icon">
+        </a>
+      </div>
+    </header>
+    <main class="main-container">
+      <p class="starting-info">Select a cell by position of row or column.</p>
+      <label class="div-boxes" for="div-box"
+        >Enter Number Of Boxes You Want :
+        <input type="number" id="div-box" placeholder="Default is 9 boxes" />
+      </label>
+      <p class="default">The default row x column grid is of 3x3</p>
+      <div class="table"></div>
+      <p class="click-me">
+        Click on the div box to color it.<br />Double Click to remove the color.
+      </p>
+      <label class="cell-num" for="cell-numbers"
+        ><span class="bold">Cell Number (1-9 Default) :</span>
+        <input type="text" id="cell-numbers" />
+      </label>
+      <div class="hr-container">
+        <div class="line"></div>
+        <span>OR</span>
+        <div class="line"></div>
+      </div>
+      <div class="bottom-container">
+        <label for="row-input"
+          ><span class="bold">Row Input (1-3) : </span>
+          <input type="text" id="row-input" />
+        </label>
+        <label for="column-input"
+          ><span class="bold">Column Input(1-3) :</span>
+          <input type="text" id="column-input" />
+        </label>
+      </div>
+    </main>
+    <footer>
+        <p class="footer__info"><span class="bold">Click</span> on the div box to color it. <span class="bold">Double Click </span>to remove the color.</p>
+    </footer>
+  </body>
+</html>

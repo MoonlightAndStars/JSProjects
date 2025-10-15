@@ -1,0 +1,198 @@
+/* reset */
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+header {
+    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(113, 221, 185);
+  color: white;
+  padding: 0.75em;
+}
+
+.heading {
+  font-size: 1.5rem;
+  animation: slideDown 2s ease;
+}
+
+.links img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  animation: slideDown 2s ease-out;
+}
+
+
+.starting-info {
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+.div-boxes {
+    margin-block: 0.5em;
+}
+
+.default {
+  text-align: center;
+  color: red;
+  margin-block: 0.5em;
+  animation: change-color 3s infinite;
+  transition: all 0.3s ease-in-out;
+  font-weight: 600;
+}
+
+/* main container fills viewport */
+.main-container {
+    margin-block: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 95vw;
+  background: #fff;
+  border-radius: 1.5em;
+  padding: 1em;
+  box-shadow: 0 0 0.2em 0.1em rgb(30, 30, 31);
+}
+
+
+/* grid/table */
+.table {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  border: 2px solid black;
+  max-width: 90%;
+  padding : 1em;
+}
+
+/* boxes */
+.box {
+align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffffd7;
+  color: #000;
+  font-weight: 600;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.box:hover {
+  transform: scale(1.1);
+}
+
+.box.active {
+  background-color: rgb(60, 197, 202);
+  color: rgb(252, 252, 252);
+  font-weight: 700;
+  border: 0.15em solid rgba(154, 122, 243, 0.781);
+}
+
+.click-me {
+    margin-block: 0.5em;
+      text-align: center;
+  font-weight: 500;
+}
+
+/* OR line */
+.hr-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  gap: 0.75em;
+  margin-block: 0.5em;
+}
+
+.line {
+  flex: 1;
+  height: 0;
+  border-top: 1px solid rgba(0,0,0,0.3);
+}
+
+.hr-container span {
+  font-size: 0.9rem;
+  color: rgba(0,0,0,0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+
+input:focus {
+    border-color: purple;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.cell-num {
+    margin-block: 0.5em;
+}
+
+.bottom-container {
+    border : 2px solid;
+    display: flex;
+    gap : 2em;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 100%;
+}
+
+footer {
+  width: 100%;
+  padding: 0.5em;
+  background-color: rgba(0, 0, 0, 0.856);
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.footer__info {
+  display: inline-block;
+  transform: translateX(100%);
+  animation: run 20s linear infinite;
+}
+
+.footer__info > span {
+    color : red;
+}
+
+/* animation keyframes */
+@keyframes change-color {
+  0% { color: rgb(241, 141, 141); opacity: 0; }
+  25% { color: rgb(233, 73, 73); }
+  50% { color: red; opacity: 1; }
+  75% { color: rgb(233, 73, 73); }
+  100% { color: rgb(241, 141, 141); opacity: 0; }
+}
+
+@keyframes slideDown {
+  0% { transform: translateY(-10rem); opacity: 0.3; }
+  100% { transform: translateY(0rem); opacity: 1; }
+}
+
+@keyframes run {
+  0% { transform: translateX(100%); opacity: 1; }
+  100% { transform: translateX(-100%); }
+}
